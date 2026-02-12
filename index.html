@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis lenis-smooth">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Anand — Open Source Systems Contributor</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23000'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='%23fff' font-family='system-ui' font-weight='800'>A</text></svg>">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <!-- Lenis for Smooth Scrolling -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./src/main.css">
+</head>
+<body class="antialiased selection:bg-black selection:text-white">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+    <!-- Splash Screen -->
+    <div class="loader-overlay" id="loader">
+        <div class="text-6xl md:text-9xl font-black tracking-tighter mix-blend-difference" id="loader-percent">000</div>
+        <div class="text-xs font-mono mt-4 tracking-widest uppercase opacity-50">Loading Interface</div>
+    </div>
+    <div class="loader-curtain" id="loader-curtain"></div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full p-8 flex justify-between items-center z-50 mix-blend-difference text-white opacity-0" id="navbar">
+        <div class="text-2xl font-black tracking-tighter uppercase cursor-pointer hover:opacity-70 transition-opacity">AKASH.DEV</div>
+        <div class="hidden md:flex gap-8 font-mono text-sm">
+            <a href="#opensource" class="hover:underline underline-offset-4">OPEN SOURCE</a>
+            <a href="#bitcoin" class="hover:underline underline-offset-4">BITCOIN</a>
+            <a href="#principles" class="hover:underline underline-offset-4">PRINCIPLES</a>
+            <a href="#about" class="hover:underline underline-offset-4">ABOUT</a>
+            <a href="#contact" class="hover:underline underline-offset-4">CONTACT</a>
+        </div>
+        <div class="text-xs font-mono border border-white/30 px-3 py-1 rounded-full">
+            OPEN SOURCE CONTRIBUTOR
+        </div>
+    </nav>
+    <main class="relative z-10 w-full overflow-hidden">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center relative px-6 md:px-20 pt-24 grid-bg">
+            <!-- Background Parallax Text -->
+            <div class="absolute top-1/4 -right-20 text-[20vw] font-bold text-gray-50 opacity-20 pointer-events-none select-none leading-none z-0 parallax-element" data-speed="0.2">
+                OSS
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="order-2 lg:order-1 space-y-6">
+                    <div class="overflow-hidden">
+                        <h2 class="text-xl text-gray-500 font-mono hero-reveal">Open Source Systems Contributor</h2>
+                    </div>
+                    <div class="relative">
+                        <h1 class="text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.8] mb-4">
+                            <div class="overflow-hidden"><span class="block hero-reveal">AKASH</span></div>
+                            <div class="overflow-hidden"><span class="block hero-reveal text-stroke">ANAND</span></div>
+                        </h1>
+                        <div class="overflow-hidden mt-4">
+                            <p class="text-2xl md:text-3xl font-mono text-gray-600 hero-reveal">Cloud Native · Runtime Systems · Bitcoin Infrastructure</p>
+                        </div>
+                    </div>
+                    <div class="h-12 overflow-hidden flex items-center gap-2">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-xl md:text-2xl font-mono" id="typewriter"></span>
+                    </div>
+                    <p class="text-gray-600 font-mono text-sm max-w-lg hero-reveal">
+                        Contributing to large-scale infrastructure systems while expanding into decentralized Bitcoin protocol engineering.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-2 hero-reveal">
+                        <span class="px-3 py-1 bg-gray-900 text-white text-xs font-mono border border-gray-900">LINUX</span>
+                        <span class="px-3 py-1 bg-gray-900 text-white text-xs font-mono border border-gray-900">C++</span>
+                        <span class="px-3 py-1 bg-gray-900 text-white text-xs font-mono border border-gray-900">GO</span>
+                        <span class="px-3 py-1 bg-gray-900 text-white text-xs font-mono border border-gray-900">DOCKER</span>
+                        <span class="px-3 py-1 bg-gray-900 text-white text-xs font-mono border border-gray-900">KUBERNETES</span>
+                        <span class="px-3 py-1 bg-orange-500 text-white text-xs font-mono border border-orange-500">BITCOIN CORE</span>
+                    </div>
+                    <div class="pt-8 flex gap-6 hero-reveal">
+                        <a href="#opensource" class="magnetic-btn px-10 py-4 bg-black text-white font-bold hover:bg-gray-900 transition-colors shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] border border-black">
+                            VIEW CONTRIBUTIONS
+                        </a>
+                        <a href="#bitcoin" class="magnetic-btn px-10 py-4 border border-black font-bold hover:bg-black hover:text-white transition-all">
+                            BITCOIN FOCUS
+                        </a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center relative">
+                    <div class="hero-img-container w-full max-w-md aspect-[4/5] relative grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group">
+                        <img src="/kelum-viduranga-portrait.jpeg" alt="Akash Anand" class="w-full h-full object-cover">
+                        <!-- Overlay Lines -->
+                        <div class="absolute inset-0 border border-white/20 pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 text-xs font-mono font-bold border border-black">
+                            SCROLL TO EXPLORE
+                        </div>
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-2 right-2 md:bottom-6 md:right-6 w-28 h-28 md:w-32 md:h-32 rounded-full bg-black text-white flex items-center justify-center text-center text-xs font-mono rotate-12 animate-spin-slow shadow-2xl hero-reveal">
+                            OPEN<br>SOURCE
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-0 animate-fade-in-up" style="animation-delay: 2s;">
+                <div class="w-[1px] h-20 bg-gradient-to-b from-transparent to-black"></div>
+            </div>
+        </section>
+        <!-- Marquee -->
+        <div class="py-12 bg-black text-white overflow-hidden border-y border-white/10 rotate-[-2deg] scale-105 z-20 relative">
+            <div class="flex whitespace-nowrap marquee-track">
+                <span class="text-6xl font-black font-mono mx-8 tracking-tighter">OPEN SOURCE • CLOUD NATIVE • RUNTIME SYSTEMS • KUBERNETES • BITCOIN CORE • INFRASTRUCTURE •</span>
+                <span class="text-6xl font-black font-mono mx-8 tracking-tighter">OPEN SOURCE • CLOUD NATIVE • RUNTIME SYSTEMS • KUBERNETES • BITCOIN CORE • INFRASTRUCTURE •</span>
+            </div>
+        </div>
+
+        <!-- Horizontal Scroll Section - REQUIRED FOR SCROLLTRIGGER -->
+        <section id="works-container" class="relative overflow-hidden bg-gray-950">
+            <div id="works-wrapper" class="flex">
+                <!-- Work Item 1: Cloud Native -->
+                <div class="work-item min-w-[100vw] h-screen flex items-center justify-center p-8 md:p-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
+                        <div class="space-y-6">
+                            <span class="text-blue-400 font-mono text-sm">01 / CLOUD NATIVE</span>
+                            <h2 class="text-5xl md:text-7xl font-black text-white leading-tight">
+                                KUBERNETES<br><span class="text-stroke-white">ECOSYSTEM</span>
+                            </h2>
+                            <p class="text-gray-400 font-mono text-sm max-w-md">
+                                Contributing to projects that power cloud-native infrastructure. Kubebuilder, kube-rs, and operator frameworks.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 border border-blue-500 text-blue-400 text-xs font-mono">Go</span>
+                                <span class="px-3 py-1 border border-blue-500 text-blue-400 text-xs font-mono">Rust</span>
+                                <span class="px-3 py-1 border border-blue-500 text-blue-400 text-xs font-mono">K8s CRDs</span>
+                            </div>
+                        </div>
+                        <div class="aspect-video bg-gray-900 border border-gray-800 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-6xl font-black text-blue-400">K8S</div>
+                                <div class="text-gray-500 font-mono text-xs mt-2">kubebuilder · kube-rs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Item 2: Runtime Systems -->
+                <div class="work-item min-w-[100vw] h-screen flex items-center justify-center p-8 md:p-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
+                        <div class="space-y-6">
+                            <span class="text-purple-400 font-mono text-sm">02 / RUNTIME SYSTEMS</span>
+                            <h2 class="text-5xl md:text-7xl font-black text-white leading-tight">
+                                WASMEDGE<br><span class="text-stroke-white">RUNTIME</span>
+                            </h2>
+                            <p class="text-gray-400 font-mono text-sm max-w-md">
+                                High-performance WebAssembly runtime for cloud and edge. Bug fixes, test stability, and lifecycle management contributions.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 border border-purple-500 text-purple-400 text-xs font-mono">C++</span>
+                                <span class="px-3 py-1 border border-purple-500 text-purple-400 text-xs font-mono">WebAssembly</span>
+                                <span class="px-3 py-1 border border-purple-500 text-purple-400 text-xs font-mono">WASI</span>
+                            </div>
+                        </div>
+                        <div class="aspect-video bg-gray-900 border border-gray-800 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-6xl font-black text-purple-400">WASM</div>
+                                <div class="text-gray-500 font-mono text-xs mt-2">WasmEdge Runtime</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Item 3: Bitcoin Infrastructure -->
+                <div class="work-item min-w-[100vw] h-screen flex items-center justify-center p-8 md:p-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
+                        <div class="space-y-6">
+                            <span class="text-orange-400 font-mono text-sm">03 / BITCOIN INFRASTRUCTURE</span>
+                            <h2 class="text-5xl md:text-7xl font-black text-white leading-tight">
+                                BITCOIN<br><span class="text-stroke-white">CORE</span>
+                            </h2>
+                            <p class="text-gray-400 font-mono text-sm max-w-md">
+                                Exploring decentralized protocol engineering. Full node operations, reproducible builds, and consensus-critical systems.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 border border-orange-500 text-orange-400 text-xs font-mono">C++</span>
+                                <span class="px-3 py-1 border border-orange-500 text-orange-400 text-xs font-mono">Linux</span>
+                                <span class="px-3 py-1 border border-orange-500 text-orange-400 text-xs font-mono">Guix</span>
+                            </div>
+                        </div>
+                        <div class="aspect-video bg-gray-900 border border-gray-800 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-6xl font-black text-orange-400">₿</div>
+                                <div class="text-gray-500 font-mono text-xs mt-2">Bitcoin Core · Lightning</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Item 4: Infrastructure Tooling -->
+                <div class="work-item min-w-[100vw] h-screen flex items-center justify-center p-8 md:p-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl">
+                        <div class="space-y-6">
+                            <span class="text-green-400 font-mono text-sm">04 / TOOLING</span>
+                            <h2 class="text-5xl md:text-7xl font-black text-white leading-tight">
+                                CI/CD &<br><span class="text-stroke-white">TESTING</span>
+                            </h2>
+                            <p class="text-gray-400 font-mono text-sm max-w-md">
+                                Build pipelines, test frameworks, and documentation. Making infrastructure reliable and developer-friendly.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 border border-green-500 text-green-400 text-xs font-mono">GitHub Actions</span>
+                                <span class="px-3 py-1 border border-green-500 text-green-400 text-xs font-mono">Docker</span>
+                                <span class="px-3 py-1 border border-green-500 text-green-400 text-xs font-mono">Testing</span>
+                            </div>
+                        </div>
+                        <div class="aspect-video bg-gray-900 border border-gray-800 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-6xl font-black text-green-400">⚙</div>
+                                <div class="text-gray-500 font-mono text-xs mt-2">CI/CD · Automation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPEN SOURCE CONTRIBUTIONS - PRIMARY SECTION -->
+        <section id="opensource" class="py-20 bg-gray-950 text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5">
+                <div class="w-full h-full grid-bg invert"></div>
+            </div>
+            <div class="container mx-auto px-6 md:px-20 relative z-10">
+                <!-- Section Header -->
+                <div class="mb-16">
+                    <span class="inline-block border border-green-500 text-green-400 px-4 py-1 rounded-full text-sm font-mono mb-6" >OPEN_SOURCE_CONTRIBUTIONS</span>
+                    <h2 class="text-5xl md:text-7xl font-black mb-4 leading-tight" >
+                        CONTRIBUTING TO<br>
+                        <span class="text-green-400">REAL SYSTEMS</span>
+                    </h2>
+                    <p class="text-gray-400 font-mono text-sm max-w-2xl" >
+                        Active contributor to cloud-native infrastructure, runtime systems, and tooling. Focus on code quality, test stability, and system reliability.
+                    </p>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="grid grid-cols-3 gap-6 mb-16 max-w-3xl" >
+                    <div class="border border-gray-800 p-6 text-center hover:border-green-500 transition-colors">
+                        <div class="text-4xl md:text-5xl font-black font-mono text-green-400" id="pr-count">12+</div>
+                        <div class="text-xs font-mono text-gray-500 mt-2">PRs MERGED</div>
+                    </div>
+                    <div class="border border-gray-800 p-6 text-center hover:border-green-500 transition-colors">
+                        <div class="text-4xl md:text-5xl font-black font-mono text-green-400" id="issues-count">8+</div>
+                        <div class="text-xs font-mono text-gray-500 mt-2">ISSUES RESOLVED</div>
+                    </div>
+                    <div class="border border-gray-800 p-6 text-center hover:border-green-500 transition-colors">
+                        <div class="text-4xl md:text-5xl font-black font-mono text-green-400" id="repos-count">5+</div>
+                        <div class="text-xs font-mono text-gray-500 mt-2">REPOSITORIES</div>
+                    </div>
+                </div>
+
+                <!-- Category A: Cloud Native Infrastructure -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold font-mono mb-8 flex items-center gap-3">
+                        <span class="w-3 h-3 bg-blue-500"></span>
+                        CLOUD NATIVE INFRASTRUCTURE
+                    </h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Contribution Card -->
+                        <div class="border border-gray-800 bg-gray-900/50 p-6 hover:border-blue-500 hover:-translate-y-1 transition-all duration-300" >
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="text-xl font-bold">kubebuilder</h4>
+                                    <p class="text-gray-500 font-mono text-xs">kubernetes-sigs/kubebuilder</p>
+                                </div>
+                                <span class="text-xs font-mono px-2 py-1 bg-blue-500/20 text-blue-400 border border-blue-500/30">K8S TOOLING</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">SDK for building Kubernetes APIs using CRDs</p>
+                            <div class="space-y-2 text-xs font-mono">
+                                <div class="text-gray-500">KEY CONTRIBUTIONS:</div>
+                                <ul class="text-gray-300 space-y-1 pl-4">
+                                    <li>• Documentation improvements for scaffolding</li>
+                                    <li>• Test coverage enhancements</li>
+                                    <li>• CI pipeline optimizations</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2 flex-wrap">
+                                <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400">Go</span>
+                                <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400">Kubernetes</span>
+                                <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400">CRDs</span>
+                            </div>
+                        </div>
+
+                        <!-- Contribution Card 2 -->
+                        <div class="border border-gray-800 bg-gray-900/50 p-6 hover:border-blue-500 hover:-translate-y-1 transition-all duration-300" >
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="text-xl font-bold">kube-rs</h4>
+                                    <p class="text-gray-500 font-mono text-xs">kube-rs/kube</p>
+                                </div>
+                                <span class="text-xs font-mono px-2 py-1 bg-blue-500/20 text-blue-400 border border-blue-500/30">RUST K8S</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">Rust client for Kubernetes</p>
+                            <div class="space-y-2 text-xs font-mono">
+                                <div class="text-gray-500">KEY CONTRIBUTIONS:</div>
+                                <ul class="text-gray-300 space-y-1 pl-4">
+                                    <li>• API documentation enhancements</li>
+                                    <li>• Example code improvements</li>
+                                    <li>• Error handling patterns</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2 flex-wrap">
+                                <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400">Rust</span>
+                                <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400">Async</span>
+                                <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400">K8s API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category B: Runtime / Wasm Systems -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold font-mono mb-8 flex items-center gap-3">
+                        <span class="w-3 h-3 bg-purple-500"></span>
+                        RUNTIME / WASM SYSTEMS
+                    </h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- WasmEdge Card -->
+                        <div class="border border-gray-800 bg-gray-900/50 p-6 hover:border-purple-500 hover:-translate-y-1 transition-all duration-300" >
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="text-xl font-bold">WasmEdge</h4>
+                                    <p class="text-gray-500 font-mono text-xs">WasmEdge/WasmEdge</p>
+                                </div>
+                                <span class="text-xs font-mono px-2 py-1 bg-purple-500/20 text-purple-400 border border-purple-500/30">WASM RUNTIME</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4">Lightweight, high-performance WebAssembly runtime for cloud-native and edge computing</p>
+                            <div class="space-y-2 text-xs font-mono">
+                                <div class="text-gray-500">KEY CONTRIBUTIONS:</div>
+                                <ul class="text-gray-300 space-y-1 pl-4">
+                                    <li>• Runtime lifecycle bug fixes</li>
+                                    <li>• Unit test stability improvements</li>
+                                    <li>• Engine teardown flow fixes</li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2 flex-wrap">
+                                <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400">C++</span>
+                                <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400">WebAssembly</span>
+                                <span class="text-xs px-2 py-1 bg-gray-800 text-gray-400">WASI</span>
+                            </div>
+                        </div>
+
+                        <!-- PR Block - Terminal Style -->
+                        <div class="border border-gray-800 bg-black p-6 font-mono text-sm" >
+                            <div class="text-green-400 mb-4">// NOTABLE PR</div>
+                            <div class="space-y-3">
+                                <div class="border-l-2 border-purple-500 pl-4">
+                                    <div class="text-purple-400">PR #3842</div>
+                                    <div class="text-white text-xs mt-1">Fix: Prevent panic in SyncRuntime during worker destruction</div>
+                                    <div class="text-gray-500 text-xs mt-2">AREA: Engine lifecycle management</div>
+                                    <div class="text-gray-500 text-xs">IMPACT: Stabilized unit tests across teardown flow</div>
+                                    <div class="text-green-400 text-xs mt-2">STATUS: MERGED ✓</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category C: Infrastructure Tooling -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold font-mono mb-8 flex items-center gap-3">
+                        <span class="w-3 h-3 bg-yellow-500"></span>
+                        INFRASTRUCTURE TOOLING
+                    </h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Small Contribution Cards -->
+                        <div class="border border-gray-800 bg-gray-900/50 p-5 hover:border-yellow-500 transition-colors" >
+                            <h4 class="font-bold mb-2">CI/CD Pipelines</h4>
+                            <p class="text-gray-500 text-xs font-mono mb-3">GitHub Actions workflow optimizations</p>
+                            <div class="text-xs text-gray-400">
+                                <div>• Build time reductions</div>
+                                <div>• Cache strategy improvements</div>
+                            </div>
+                        </div>
+                        <div class="border border-gray-800 bg-gray-900/50 p-5 hover:border-yellow-500 transition-colors" >
+                            <h4 class="font-bold mb-2">Testing Frameworks</h4>
+                            <p class="text-gray-500 text-xs font-mono mb-3">Test stability & coverage</p>
+                            <div class="text-xs text-gray-400">
+                                <div>• Flaky test fixes</div>
+                                <div>• Integration test patterns</div>
+                            </div>
+                        </div>
+                        <div class="border border-gray-800 bg-gray-900/50 p-5 hover:border-yellow-500 transition-colors" >
+                            <h4 class="font-bold mb-2">Documentation</h4>
+                            <p class="text-gray-500 text-xs font-mono mb-3">Technical writing & examples</p>
+                            <div class="text-xs text-gray-400">
+                                <div>• API documentation</div>
+                                <div>• Getting started guides</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BITCOIN INFRASTRUCTURE SECTION -->
+        <section id="bitcoin" class="py-20 bg-orange-50 relative overflow-hidden">
+            <div class="container mx-auto px-6 md:px-20 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="inline-block border border-orange-500 text-orange-600 px-4 py-1 rounded-full text-sm font-mono mb-6" >BITCOIN_INFRASTRUCTURE</span>
+                        <h2 class="text-5xl md:text-6xl font-black mb-6 leading-tight" >
+                            BITCOIN<br>
+                            <span class="text-orange-500">FOCUS</span>
+                        </h2>
+                        <p class="text-gray-600 font-mono text-sm mb-8 max-w-lg" >
+                            Applying systems engineering experience toward decentralized protocol infrastructure. Learning-focused but technically serious.
+                        </p>
+                        <div class="space-y-4" >
+                            <div class="flex items-start gap-3">
+                                <span class="w-2 h-2 bg-orange-500 mt-2 shrink-0"></span>
+                                <div>
+                                    <div class="font-bold text-sm">Bitcoin Core Operations</div>
+                                    <div class="text-gray-500 text-xs font-mono">Running and configuring full nodes. Block validation. Peer networking.</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-2 h-2 bg-orange-500 mt-2 shrink-0"></span>
+                                <div>
+                                    <div class="font-bold text-sm">Reproducible Builds</div>
+                                    <div class="text-gray-500 text-xs font-mono">Studying deterministic compilation. Guix. Build verification.</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-2 h-2 bg-orange-500 mt-2 shrink-0"></span>
+                                <div>
+                                    <div class="font-bold text-sm">Lightning Architecture</div>
+                                    <div class="text-gray-500 text-xs font-mono">Exploring payment channels. HTLC mechanics. Node connectivity.</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-2 h-2 bg-orange-500 mt-2 shrink-0"></span>
+                                <div>
+                                    <div class="font-bold text-sm">Protocol Engineering</div>
+                                    <div class="text-gray-500 text-xs font-mono">Applying runtime/systems experience toward consensus-critical code.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bitcoin Terminal Visual -->
+                    <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 font-mono text-sm"  id="map-container">
+                        <div class="flex items-center gap-2 mb-4 pb-4 border-b border-gray-800">
+                            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                            <span class="text-gray-500 text-xs ml-2">bitcoin-cli</span>
+                        </div>
+                        <div class="space-y-2 text-xs">
+                            <div class="text-green-400">$ bitcoin-cli getblockchaininfo</div>
+                            <div class="text-gray-400 pl-2">{</div>
+                            <div class="text-gray-400 pl-4">"chain": "<span class="text-orange-400">main</span>",</div>
+                            <div class="text-gray-400 pl-4">"blocks": <span class="text-blue-400">881247</span>,</div>
+                            <div class="text-gray-400 pl-4">"verificationprogress": <span class="text-green-400">0.9999</span>,</div>
+                            <div class="text-gray-400 pl-4">"pruned": <span class="text-purple-400">false</span></div>
+                            <div class="text-gray-400 pl-2">}</div>
+                            <div class="text-green-400 mt-4">$ bitcoin-cli getnetworkinfo | jq '.subversion'</div>
+                            <div class="text-orange-400 pl-2">"/Satoshi:27.0.0/"</div>
+                            <div class="text-green-400 mt-4">$ bitcoin-cli getconnectioncount</div>
+                            <div class="text-blue-400 pl-2">125</div>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-gray-800 flex items-center gap-2" id="map-pin">
+                            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            <span class="text-gray-500 text-xs">NODE SYNCED</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENGINEERING PRINCIPLES SECTION -->
+        <section id="principles" class="py-20 bg-white relative">
+            <div class="container mx-auto px-6 md:px-20">
+                <div class="text-center mb-16">
+                    <span class="inline-block border border-black px-4 py-1 rounded-full text-sm font-mono mb-6" >ENGINEERING_PRINCIPLES</span>
+                    <h2 class="text-4xl md:text-5xl font-black" >HOW I THINK ABOUT SYSTEMS</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <div class="border border-gray-200 p-6 hover:border-black hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-300" >
+                        <div class="text-3xl font-black mb-3">01</div>
+                        <h3 class="font-bold mb-2">Determinism</h3>
+                        <p class="text-gray-500 text-sm font-mono">Same input produces same output. No hidden state. No surprises.</p>
+                    </div>
+                    <div class="border border-gray-200 p-6 hover:border-black hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-300" >
+                        <div class="text-3xl font-black mb-3">02</div>
+                        <h3 class="font-bold mb-2">Idempotency</h3>
+                        <p class="text-gray-500 text-sm font-mono">Run once or run a hundred times. Result stays the same.</p>
+                    </div>
+                    <div class="border border-gray-200 p-6 hover:border-black hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-300" >
+                        <div class="text-3xl font-black mb-3">03</div>
+                        <h3 class="font-bold mb-2">Observability</h3>
+                        <p class="text-gray-500 text-sm font-mono">If you can't measure it, you can't fix it. Metrics, logs, traces.</p>
+                    </div>
+                    <div class="border border-gray-200 p-6 hover:border-black hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-300" >
+                        <div class="text-3xl font-black mb-3">04</div>
+                        <h3 class="font-bold mb-2">Fault Tolerance</h3>
+                        <p class="text-gray-500 text-sm font-mono">Systems fail. Recovery should be automatic. Degrade gracefully.</p>
+                    </div>
+                    <div class="border border-gray-200 p-6 hover:border-black hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-300" >
+                        <div class="text-3xl font-black mb-3">05</div>
+                        <h3 class="font-bold mb-2">Reproducibility</h3>
+                        <p class="text-gray-500 text-sm font-mono">Build it anywhere, get the same artifact. Version everything.</p>
+                    </div>
+                    <div class="border border-gray-200 p-6 hover:border-black hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-300" >
+                        <div class="text-3xl font-black mb-3">06</div>
+                        <h3 class="font-bold mb-2">Security First</h3>
+                        <p class="text-gray-500 text-sm font-mono">Not an afterthought. Built into every layer from day one.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Journey Section - WITH TIMELINE -->
+        <section id="about" class="py-20 bg-gray-50 relative overflow-hidden">
+            <div class="container mx-auto px-6 md:px-20 relative">
+                <div class="text-center mb-16">
+                    <span class="inline-block border border-gray-400 px-4 py-1 rounded-full text-sm font-mono mb-6" >ABOUT_ME</span>
+                    <h2 class="text-4xl md:text-5xl font-black" >THE JOURNEY</h2>
+                </div>
+                
+                <!-- Timeline Container -->
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Timeline Line Background -->
+                    <div class="timeline-line"></div>
+                    <!-- Animated Progress Line -->
+                    <div class="timeline-progress" id="scroll-line"></div>
+                    
+                    <!-- Timeline Items -->
+                    <div class="space-y-16 relative z-10">
+                        <!-- Item 1 -->
+                        <div class="flex items-center gap-8" data-gsap="service-item">
+                            <div class="flex-1 text-right">
+                                <div class="inline-block bg-white border border-gray-200 p-6 shadow-sm">
+                                    <span class="text-xs font-mono text-gray-500">2024 - PRESENT</span>
+                                    <h3 class="font-bold mt-2">Open Source Systems Contributor</h3>
+                                    <p class="text-gray-500 text-sm font-mono mt-2">Active contributions to cloud-native infrastructure and runtime systems</p>
+                                </div>
+                            </div>
+                            <div class="w-4 h-4 bg-black rounded-full border-4 border-white shadow-lg shrink-0"></div>
+                            <div class="flex-1"></div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="flex items-center gap-8" data-gsap="service-item">
+                            <div class="flex-1"></div>
+                            <div class="w-4 h-4 bg-black rounded-full border-4 border-white shadow-lg shrink-0"></div>
+                            <div class="flex-1">
+                                <div class="inline-block bg-white border border-gray-200 p-6 shadow-sm">
+                                    <span class="text-xs font-mono text-gray-500">2023</span>
+                                    <h3 class="font-bold mt-2">Bitcoin Infrastructure Focus</h3>
+                                    <p class="text-gray-500 text-sm font-mono mt-2">Started studying Bitcoin Core, running full nodes, and understanding consensus systems</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div class="flex items-center gap-8" data-gsap="service-item">
+                            <div class="flex-1 text-right">
+                                <div class="inline-block bg-white border border-gray-200 p-6 shadow-sm">
+                                    <span class="text-xs font-mono text-gray-500">2022</span>
+                                    <h3 class="font-bold mt-2">Cloud Native & Kubernetes</h3>
+                                    <p class="text-gray-500 text-sm font-mono mt-2">Deep dive into container orchestration, operators, and cloud infrastructure</p>
+                                </div>
+                            </div>
+                            <div class="w-4 h-4 bg-black rounded-full border-4 border-white shadow-lg shrink-0"></div>
+                            <div class="flex-1"></div>
+                        </div>
+                        
+                        <!-- Item 4 -->
+                        <div class="flex items-center gap-8" data-gsap="service-item">
+                            <div class="flex-1"></div>
+                            <div class="w-4 h-4 bg-black rounded-full border-4 border-white shadow-lg shrink-0"></div>
+                            <div class="flex-1">
+                                <div class="inline-block bg-white border border-gray-200 p-6 shadow-sm">
+                                    <span class="text-xs font-mono text-gray-500">2020</span>
+                                    <h3 class="font-bold mt-2">Systems Programming Journey Begins</h3>
+                                    <p class="text-gray-500 text-sm font-mono mt-2">Started with Linux, C++, and understanding how systems work at the low level</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- System Uptime Stats -->
+                <div class="mt-20 grid grid-cols-2 md:grid-cols-6 gap-4 max-w-4xl mx-auto" >
+                    <div class="bg-white border border-gray-200 p-4 text-center">
+                        <div class="text-3xl font-black font-mono" id="years">00</div>
+                        <div class="text-xs text-gray-500 font-mono">YEARS</div>
+                    </div>
+                    <div class="bg-white border border-gray-200 p-4 text-center">
+                        <div class="text-3xl font-black font-mono" id="months">00</div>
+                        <div class="text-xs text-gray-500 font-mono">MONTHS</div>
+                    </div>
+                    <div class="bg-white border border-gray-200 p-4 text-center">
+                        <div class="text-3xl font-black font-mono" id="days">00</div>
+                        <div class="text-xs text-gray-500 font-mono">DAYS</div>
+                    </div>
+                    <div class="bg-white border border-gray-200 p-4 text-center">
+                        <div class="text-3xl font-black font-mono" id="hours">00</div>
+                        <div class="text-xs text-gray-500 font-mono">HOURS</div>
+                    </div>
+                    <div class="bg-white border border-gray-200 p-4 text-center">
+                        <div class="text-3xl font-black font-mono" id="minutes">00</div>
+                        <div class="text-xs text-gray-500 font-mono">MINUTES</div>
+                    </div>
+                    <div class="bg-white border border-gray-200 p-4 text-center">
+                        <div class="text-3xl font-black font-mono" id="seconds">00</div>
+                        <div class="text-xs text-gray-500 font-mono">SECONDS</div>
+                        <div class="h-1 bg-gray-200 mt-2 rounded overflow-hidden">
+                            <div class="h-full bg-black transition-all duration-100" id="sec-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Career Stats -->
+                <div class="mt-8 flex justify-center gap-8" >
+                    <div class="text-center">
+                        <div class="text-4xl font-black" id="dynamic-exp">5+</div>
+                        <div class="text-xs text-gray-500 font-mono">YEARS EXPERIENCE</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-black" id="dynamic-projects">50+</div>
+                        <div class="text-xs text-gray-500 font-mono">CONTRIBUTIONS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 bg-black text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+            <div class="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
+                <h2 class="text-6xl md:text-9xl font-black mb-12 hover:tracking-wide transition-all duration-500 cursor-default">GET IN TOUCH</h2>
+                <p class="text-gray-400 font-mono text-sm max-w-lg mb-12">
+                    Open to open-source collaboration, Summer of Bitcoin, and infrastructure engineering roles.<br>
+                    Serious inquiries only.
+                </p>
+                <div class="flex flex-wrap justify-center gap-8 mb-20">
+                    <a href="https://github.com/mrhapile" target="_blank" class="magnetic-btn w-20 h-20 md:w-24 md:h-24 rounded-full border border-gray-700 flex items-center justify-center text-3xl hover:bg-white hover:text-black hover:scale-110 transition-all duration-300">
+                        <i class="ri-github-fill"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/akashanand" target="_blank" class="magnetic-btn w-20 h-20 md:w-24 md:h-24 rounded-full border border-gray-700 flex items-center justify-center text-3xl hover:bg-white hover:text-black hover:scale-110 transition-all duration-300">
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+                    <a href="mailto:akash@example.com" class="magnetic-btn w-20 h-20 md:w-24 md:h-24 rounded-full border border-gray-700 flex items-center justify-center text-3xl hover:bg-white hover:text-black hover:scale-110 transition-all duration-300">
+                        <i class="ri-mail-send-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/akashanand" target="_blank" class="magnetic-btn w-20 h-20 md:w-24 md:h-24 rounded-full border border-gray-700 flex items-center justify-center text-3xl hover:bg-white hover:text-black hover:scale-110 transition-all duration-300">
+                        <i class="ri-twitter-x-fill"></i>
+                    </a>
+                </div>
+                <!-- System Status Footer -->
+                <div class="w-full max-w-4xl border-t border-gray-800 pt-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="flex items-center justify-center gap-2 text-xs font-mono">
+                            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            <span class="text-gray-400">SYSTEM STATUS:</span>
+                            <span class="text-green-400">ONLINE</span>
+                        </div>
+                        <div class="flex items-center justify-center gap-2 text-xs font-mono">
+                            <span class="text-gray-400">CONTRIBUTIONS:</span>
+                            <span class="text-white">ACTIVE</span>
+                        </div>
+                        <div class="flex items-center justify-center gap-2 text-xs font-mono">
+                            <span class="text-gray-400">BITCOIN NODE:</span>
+                            <span class="text-green-400">SYNCED</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-center text-gray-500 font-mono text-xs">
+                        <p>&copy; 2026 AKASH ANAND</p>
+                        <p class="mt-2 md:mt-0">OPEN SOURCE SYSTEMS CONTRIBUTOR</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- External JS -->
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
