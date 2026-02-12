@@ -26,6 +26,7 @@ const config: Config = {
         parchment: '#F0E6D2',
       },
       fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Playfair Display', 'serif'],
         display: ['Cinzel', 'serif'],
         mono: ['JetBrains Mono', 'monospace'],
@@ -37,9 +38,9 @@ const config: Config = {
       },
       keyframes: {
         fog: {
-          '0%': { transform: 'translateX(0) opacity(0.3)' },
-          '50%': { transform: 'translateX(-10%) opacity(0.5)' },
-          '100%': { transform: 'translateX(0) opacity(0.3)' },
+          '0%': { transform: 'translateX(0)', opacity: '0.3' },
+          '50%': { transform: 'translateX(-10%)', opacity: '0.5' },
+          '100%': { transform: 'translateX(0)', opacity: '0.3' },
         },
         blink: {
           '0%, 100%': { opacity: '1' },

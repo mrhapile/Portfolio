@@ -16,7 +16,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.key === '`') {
-        setMode(prev => prev === ViewMode.GUI ? ViewMode.TERMINAL : ViewMode.GUI);
+        setMode((prev) => (prev === ViewMode.GUI ? ViewMode.TERMINAL : ViewMode.GUI));
       }
       if (e.key === 'Escape' && mode === ViewMode.TERMINAL) {
         setMode(ViewMode.GUI);
@@ -30,19 +30,23 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-navy-950 text-slate-200 font-sans selection:bg-gold-500 selection:text-black">
       <Helmet>
         <title>Grand Line Infrastructure | DevOps Portfolio</title>
-        <meta name="description" content="A production-grade DevOps portfolio showcasing infrastructure as code, CI/CD, and Bitcoin node management." />
-        <meta name="theme-color" content="#0B1320" />
+        <meta
+          name="description"
+          content="A production-grade DevOps portfolio showcasing infrastructure as code, CI/CD pipelines, Bitcoin node infrastructure, and Kubernetes orchestration."
+        />
+        <meta name="theme-color" content="#050A10" />
       </Helmet>
 
-      {/* Floating Toggle */}
+      {/* Floating Terminal Toggle */}
       {mode === ViewMode.GUI && (
         <button
           onClick={() => setMode(ViewMode.TERMINAL)}
-          className="fixed bottom-6 right-6 z-50 bg-navy-900 border border-gold-500 text-gold-500 p-3 rounded-full shadow-[0_0_20px_rgba(212,160,23,0.3)] hover:bg-gold-500 hover:text-black transition-all duration-300 group"
+          className="fixed bottom-6 right-6 z-50 bg-navy-900/90 backdrop-blur-sm border border-gold-500/60 text-gold-500 p-3 rounded-full shadow-[0_0_25px_rgba(212,160,23,0.25)] hover:shadow-[0_0_35px_rgba(212,160,23,0.5)] hover:bg-gold-500 hover:text-black hover:border-gold-400 transition-all duration-300 group"
           title="Toggle Terminal Mode (Ctrl + `)"
+          aria-label="Open Terminal Mode"
         >
           <Terminal size={24} />
-          <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-navy-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+          <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-navy-900/95 backdrop-blur-sm text-gold-400 text-xs font-mono px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-navy-700/50 shadow-lg">
             Enter CLI Mode
           </span>
         </button>
@@ -58,9 +62,13 @@ const App: React.FC = () => {
           <Dashboard />
           <Projects />
 
-          <footer className="py-12 bg-navy-950 border-t border-navy-900 text-center">
+          <footer className="py-16 bg-navy-950 border-t border-navy-800/30 text-center relative">
+            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-gold-600/40 to-transparent mx-auto mb-6" />
             <p className="text-slate-600 font-serif italic text-sm">
               &copy; {new Date().getFullYear()} Grand Line Infrastructure. Built on the High Seas.
+            </p>
+            <p className="text-slate-700 font-mono text-xs mt-2 tracking-wider">
+              CTRL + ` &middot; TERMINAL MODE
             </p>
           </footer>
         </main>

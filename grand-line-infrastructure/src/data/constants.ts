@@ -1,4 +1,3 @@
-import React from 'react';
 import { Milestone, Project } from '../types';
 
 export const MILESTONES: Milestone[] = [
