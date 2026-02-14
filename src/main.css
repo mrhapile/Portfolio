@@ -96,6 +96,7 @@ body {
 }
 /* Ensure section content is always visible - fallback for GSAP */
 #opensource,
+#proof-of-work,
 #bitcoin,
 #principles,
 #about,
@@ -105,11 +106,13 @@ body {
 }
 /* Ensure GSAP-animated elements in sections are visible */
 #opensource [data-gsap],
+#proof-of-work [data-gsap],
 #bitcoin [data-gsap],
 #principles [data-gsap],
 #about [data-gsap],
 #contact [data-gsap],
 #opensource [data-gsap] *,
+#proof-of-work [data-gsap] *,
 #bitcoin [data-gsap] *,
 #principles [data-gsap] *,
 #about [data-gsap] *,
@@ -184,6 +187,11 @@ body {
 /* Text Stroke for dark backgrounds */
 .text-stroke-white {
     -webkit-text-stroke: 2px white;
+    -webkit-text-fill-color: transparent;
+}
+/* Text Stroke for light backgrounds */
+.text-stroke {
+    -webkit-text-stroke: 2px black;
     -webkit-text-fill-color: transparent;
 }
 
