@@ -91,7 +91,7 @@
                 </div>
                 <div class="order-1 lg:order-2 flex justify-center relative">
                     <div class="hero-img-container w-full max-w-md aspect-[4/5] relative grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group">
-                        <img src="/kelum-viduranga-portrait.jpeg" alt="Akash Anand" class="w-full h-full object-cover">
+                        <img src="public/kelum-viduranga-portrait.jpeg" alt="Akash Anand" class="w-full h-full object-cover">
                         <!-- Overlay Lines -->
                         <div class="absolute inset-0 border border-white/20 pointer-events-none"></div>
                         <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 text-xs font-mono font-bold border border-black">
@@ -109,10 +109,17 @@
             </div>
         </section>
         <!-- Marquee -->
-        <div class="py-12 bg-black text-white overflow-hidden border-y border-white/10 rotate-[-2deg] scale-105 z-20 relative">
-            <div class="flex whitespace-nowrap marquee-track">
-                <span class="text-6xl font-black font-mono mx-8 tracking-tighter">OPEN SOURCE • CLOUD NATIVE • RUNTIME SYSTEMS • KUBERNETES • BITCOIN CORE • INFRASTRUCTURE •</span>
-                <span class="text-6xl font-black font-mono mx-8 tracking-tighter">OPEN SOURCE • CLOUD NATIVE • RUNTIME SYSTEMS • KUBERNETES • BITCOIN CORE • INFRASTRUCTURE •</span>
+        <div class="relative z-10 mt-8 overflow-visible">
+            <!-- Rotated Banner Wrapper -->
+            <div class="relative -rotate-2 origin-center overflow-hidden">
+                <!-- Background filler to prevent white gap -->
+                <div class="absolute inset-0 bg-black -z-10 scale-y-155"></div>
+                <div class="bg-black text-white border-y border-white/10 py-16 overflow-hidden">
+                    <div class="marquee-track flex whitespace-nowrap will-change-transform">
+                        <span class="text-5xl font-black font-mono mx-8 tracking-tight">OPEN SOURCE • CLOUD NATIVE • RUNTIME SYSTEMS • KUBERNETES • BITCOIN CORE • INFRASTRUCTURE •</span>
+                        <span class="text-5xl font-black font-mono mx-8 tracking-tight">OPEN SOURCE • CLOUD NATIVE • RUNTIME SYSTEMS • KUBERNETES • BITCOIN CORE • INFRASTRUCTURE •</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -472,7 +479,7 @@
                                     <span class="text-xs px-2 py-1 bg-black text-white">WASI</span>
                                 </div>
                                 <div class="flex gap-3">
-                                    <a href="https://github.com/AkashAnand07/wasm-plugin-system" target="_blank" rel="noopener" class="text-black hover:text-gray-600 transition-colors" title="GitHub">
+                                    <a href="https://github.com/mrhapile/WebAssembly-based-Plugin-System-for-a-Go-Service" target="_blank" rel="noopener" class="text-black hover:text-gray-600 transition-colors" title="GitHub">
                                         <i class="ri-github-fill text-xl"></i>
                                     </a>
                                 </div>
@@ -522,7 +529,7 @@
                                     <span class="text-xs px-2 py-1 bg-black text-white">Fuzzing</span>
                                 </div>
                                 <div class="flex gap-3">
-                                    <a href="https://github.com/AkashAnand07/WASM-Injection-Framework" target="_blank" rel="noopener" class="text-black hover:text-gray-600 transition-colors" title="GitHub">
+                                    <a href="https://github.com/mrhapile/WASM-Injection-Framework" target="_blank" rel="noopener" class="text-black hover:text-gray-600 transition-colors" title="GitHub">
                                         <i class="ri-github-fill text-xl"></i>
                                     </a>
                                 </div>
@@ -582,7 +589,7 @@
                                     <span class="text-xs px-2 py-1 bg-black text-white">SPL Token</span>
                                 </div>
                                 <div class="flex gap-3">
-                                    <a href="https://github.com/AkashAnand07/Solana-Credit-Engine" target="_blank" rel="noopener" class="text-black hover:text-gray-600 transition-colors" title="GitHub">
+                                    <a href="https://github.com/mrhapile/Solana-Credit-Engine" target="_blank" rel="noopener" class="text-black hover:text-gray-600 transition-colors" title="GitHub">
                                         <i class="ri-github-fill text-xl"></i>
                                     </a>
                                 </div>
@@ -632,7 +639,7 @@
                                     <span class="text-xs px-2 py-1 bg-black text-white">TypeScript</span>
                                 </div>
                                 <div class="flex gap-3">
-                                    <a href="https://github.com/AkashAnand07/Tokenized-Yield-Infrastructure" target="_blank" rel="noopener" class="text-black hover:text-gray-600 transition-colors" title="GitHub">
+                                    <a href="https://github.com/mrhapile/Tokenized-Yield-Infrastructure" target="_blank" rel="noopener" class="text-black hover:text-gray-600 transition-colors" title="GitHub">
                                         <i class="ri-github-fill text-xl"></i>
                                     </a>
                                 </div>
@@ -885,11 +892,11 @@
                 <!-- Career Stats -->
                 <div class="mt-8 flex justify-center gap-8" >
                     <div class="text-center">
-                        <div class="text-4xl font-black" id="dynamic-exp">5+</div>
+                        <div class="text-4xl font-black" id="dynamic-exp">25+</div>
                         <div class="text-xs text-gray-500 font-mono">YEARS EXPERIENCE</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-black" id="dynamic-projects">50+</div>
+                        <div class="text-4xl font-black" id="dynamic-projects">550+</div>
                         <div class="text-xs text-gray-500 font-mono">CONTRIBUTIONS</div>
                     </div>
                 </div>
@@ -906,17 +913,17 @@
                     Serious inquiries only.
                 </p>
                 <div class="flex flex-wrap justify-center gap-8 mb-20">
-                    <a href="https://github.com/mrhapile" target="_blank" class="magnetic-btn w-20 h-20 md:w-24 md:h-24 rounded-full border border-gray-700 flex items-center justify-center text-3xl hover:bg-white hover:text-black hover:scale-110 transition-all duration-300">
-                        <i class="ri-github-fill"></i>
+                    <a href="https://github.com/mrhapile" target="_blank" class="group magnetic-btn w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-gray-600 flex items-center justify-center text-4xl leading-none hover:bg-white hover:text-black hover:border-white hover:scale-110 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300">
+                        <i class="ri-github-fill flex items-center justify-center leading-none translate-y-[1px] group-hover:scale-110 transition-transform duration-300"></i>
                     </a>
-                    <a href="https://linkedin.com/in/akashanand" target="_blank" class="magnetic-btn w-20 h-20 md:w-24 md:h-24 rounded-full border border-gray-700 flex items-center justify-center text-3xl hover:bg-white hover:text-black hover:scale-110 transition-all duration-300">
-                        <i class="ri-linkedin-fill"></i>
+                    <a href="https://www.linkedin.com/in/mrakashanand/" target="_blank" class="group magnetic-btn w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-gray-600 flex items-center justify-center text-4xl leading-none hover:bg-white hover:text-black hover:border-white hover:scale-110 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300">
+                        <i class="ri-linkedin-fill flex items-center justify-center leading-none translate-y-[1px] group-hover:scale-110 transition-transform duration-300"></i>
                     </a>
-                    <a href="mailto:akash@example.com" class="magnetic-btn w-20 h-20 md:w-24 md:h-24 rounded-full border border-gray-700 flex items-center justify-center text-3xl hover:bg-white hover:text-black hover:scale-110 transition-all duration-300">
-                        <i class="ri-mail-send-fill"></i>
+                    <a href="mailto:akashanand.office@gmail.com" class="group magnetic-btn w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-gray-600 flex items-center justify-center text-4xl leading-none hover:bg-white hover:text-black hover:border-white hover:scale-110 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300">
+                        <i class="ri-mail-send-fill flex items-center justify-center leading-none translate-y-[1px] group-hover:scale-110 transition-transform duration-300"></i>
                     </a>
-                    <a href="https://twitter.com/akashanand" target="_blank" class="magnetic-btn w-20 h-20 md:w-24 md:h-24 rounded-full border border-gray-700 flex items-center justify-center text-3xl hover:bg-white hover:text-black hover:scale-110 transition-all duration-300">
-                        <i class="ri-twitter-x-fill"></i>
+                    <a href="https://x.com/AkashAnand20035" target="_blank" class="group magnetic-btn w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-gray-600 flex items-center justify-center text-4xl leading-none hover:bg-white hover:text-black hover:border-white hover:scale-110 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300">
+                        <i class="ri-twitter-x-fill flex items-center justify-center leading-none translate-y-[1px] group-hover:scale-110 transition-transform duration-300"></i>
                     </a>
                 </div>
                 <!-- System Status Footer -->

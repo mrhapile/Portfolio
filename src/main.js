@@ -181,8 +181,8 @@ gsap.utils.toArray('[data-gsap="slide-up"]').forEach(el => {
 
 // 8. System Uptime & Stats Calculator
 function updateTimeBasedStats() {
-    const birthDate = new Date('2008-06-10T00:00:00');
-    const careerStartDate = new Date('2020-01-01T00:00:00'); // DevOps journey start
+    const birthDate = new Date('2006-07-27T00:00:00');
+    const careerStartDate = new Date('2023-01-01T00:00:00'); // DevOps journey start
     const now = new Date();
     // --- AGE CALCULATION ---
     let years = now.getFullYear() - birthDate.getFullYear();
@@ -232,7 +232,7 @@ function updateTimeBasedStats() {
     if(expEl) expEl.innerText = `${expYears}+`;
     // Calculate Deployments (Approximate rate: 3 deployments per month since start)
     const totalMonthsSinceStart = (expYears * 12) + expMonths;
-    const estimatedDeployments = Math.floor(totalMonthsSinceStart * 3) + 50; // +50 base
+    const estimatedDeployments = Math.floor(totalMonthsSinceStart * 13) + 50; // +50 base
     const projEl = document.getElementById('dynamic-projects');
     if(projEl) projEl.innerText = `${estimatedDeployments}+`;
 }

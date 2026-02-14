@@ -184,6 +184,10 @@ body {
 .work-item {
     will-change: transform;
 }
+/* Marquee Performance */
+.marquee-track {
+    will-change: transform;
+}
 /* Text Stroke for dark backgrounds */
 .text-stroke-white {
     -webkit-text-stroke: 2px white;
